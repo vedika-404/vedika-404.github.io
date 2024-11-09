@@ -14,7 +14,7 @@ body, html {
 /* Fixed Header Navigation */
 .fixed-header {
     position: fixed;
-    top: 0;
+    top: -100px;
     width: 100%;
     background-color: #fff;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
