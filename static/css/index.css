@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +8,35 @@
 body, html {
     height: 100%;
     overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Fixed Header Navigation */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: top 0.3s ease;
+}
+
+.fixed-header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.fixed-header nav ul li {
+    padding: 0.5rem;
+}
+
+.fixed-header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
 /* 404 Error Section */
@@ -37,6 +67,14 @@ body, html {
     min-height: 100vh;
     transform: translateY(100vh); /* Hide main content initially */
     transition: transform 1s ease-in-out;
+}
+
+/* Placeholder Other Content Sections */
+.other-content {
+    padding: 4rem;
+    background-color: #e0e0e0;
+    min-height: 50vh;
+    margin: 2rem 0;
 }
 
 /* Scrolled State */
