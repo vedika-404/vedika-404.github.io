@@ -13,10 +13,10 @@ window.addEventListener("scroll", function () {
         fixedHeader.style.top = "-100px"; // Hide header when scrolling back up
     }
 
-    // Show "Oops, you just lost the 404 :(" message
+    // Show "Oops, you just lost the 404 :( It's okay, there are more interesting things to see :D" message
     const errorSection = document.getElementById("error-section");
     if (scrollPos < errorSection.clientHeight) {
-        errorSection.querySelector('p:nth-child(3)').innerText = "Oops, you just lost the 404 :(";
+        errorSection.querySelector('p:nth-child(3)').innerText = "Oops, you just lost the 404 :(. It's okay, there are more interesting things to see :D";
     } else {
         errorSection.querySelector('p:nth-child(3)').innerText = "The resource requested could not be found on this server!";
     }
