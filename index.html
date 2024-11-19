@@ -6,10 +6,16 @@
     <title>your new favourite place :)</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
+
+    <!-- Balloons.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/balloons-js@1.0.0/dist/balloons.min.js"></script>
 </head>
 <body>
     <!-- Custom Cursor Styling -->
     <div class="custom-cursor" id="customCursor"></div>
+
+    <!-- Menu Button Placeholder (Code TBD) -->
+    <div class="menu-button" id="menuButton">Menu</div>
 
     <!-- Header with Navigation Links -->
     <header class="main-header">
@@ -27,9 +33,20 @@
     <section class="hero-section">
         <h1 style="color: white;">THIS PLACE IS UNDER CONSTRUCTION</h1>
         <p>work in progress i repeat work in progress fundamental changes to the website's personality being made.✨</p>
-        <button onclick="showPopup()">click me for a surprise!</button>
+        <button onclick="showPopup()" class="surprise-button">click me for a surprise!</button>
         <div class="popup" id="popup">hello.</div>
     </section>
+
+    <!-- Script to initialize balloons -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Balloons({
+                amount: 20,  // Number of balloons to display
+                colors: ["#FF7D00", "#FFDD00", "#ADFF02", "#01BEFE", "#8F00FF", "#FF006D"], // Custom colors
+                popOnClick: true, // Pop effect on click
+            });
+        });
+    </script>
 
     <script src="js/main.js"></script>
     <script src="js/home.js"></script>
