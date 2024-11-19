@@ -1,14 +1,24 @@
+/* Base Styling */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     cursor: url('../assets/cursors/custom_cursor.png'), auto;  /* Custom Cursor */
-    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    background: linear-gradient(45deg, #01BEFE, #FFDD00, #FF7D00);
+    animation: bg-animation 10s infinite alternate;
     color: #fff;
     text-align: center;
     margin: 0;
 }
 
+/* Animated Background */
+@keyframes bg-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Navbar Styling */
 .nav-bar {
-    background: #ff69b4;
+    background: #FF7D00;  /* Deep orange for the navigation bar */
     padding: 1rem;
 }
 
@@ -25,15 +35,16 @@ body {
 
 .nav-bar a {
     text-decoration: none;
-    color: #fff;
+    color: #FFDD00; /* Golden yellow for links */
     font-weight: bold;
     transition: color 0.2s;
 }
 
 .nav-bar a:hover {
-    color: yellow;
+    color: #8F00FF;  /* Purple for hover effect */
 }
 
+/* Custom Cursor */
 .custom-cursor {
     width: 32px;
     height: 32px;
@@ -42,4 +53,51 @@ body {
     pointer-events: none;
     z-index: 1000;
     transition: transform 0.1s;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 2rem;
+    background-color: rgba(173, 255, 2, 0.3); /* Subtle neon green background with opacity */
+    padding: 2rem;
+    border: 5px solid #FF006D; /* Pink-red border */
+    animation: bounce 2s infinite;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px #000, 4px 4px #FFDD00; /* Shadow for depth with golden yellow */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    color: #FFDD00; /* Golden yellow for easy readability */
+}
+
+/* Button Styling */
+button {
+    background: #8F00FF; /* Purple for buttons */
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #000;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #FF006D; /* Change to pink-red on hover */
+}
+
+/* Popup Box Styling */
+.popup {
+    display: none;
+    font-size: 2rem;
+    background: #ADFF02; /* Slightly toned-down neon green */
+    color: #000;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 5px 5px 5px #000;
 }
