@@ -1,6 +1,6 @@
 /* Base Styling */
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* All text in Comic Sans */
     cursor: url('../assets/cursors/custom_cursor.png'), auto;  /* Custom Cursor */
     background: linear-gradient(45deg, #01BEFE, #FFDD00, #FF7D00);
     animation: bg-animation 10s infinite alternate;
@@ -16,35 +16,28 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Navbar Styling */
-.nav-bar {
-    background: #FF7D00;  /* Deep orange for the navigation bar */
+/* Menu Button Styling */
+.menu-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #FF7D00;  /* Bright orange */
+    color: white;
+    border: none;
     padding: 1rem;
-}
-
-.nav-bar ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-bar li {
-    margin: 0 1rem;
-}
-
-.nav-bar a {
-    text-decoration: none;
-    color: #FFDD00; /* Golden yellow for links */
+    border-radius: 10px;
     font-weight: bold;
-    transition: color 0.2s;
+    box-shadow: 2px 2px 5px #000;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
 }
 
-.nav-bar a:hover {
-    color: #8F00FF;  /* Purple for hover effect */
+.menu-button:hover {
+    transform: scale(1.1);
+    background-color: #FF006D; /* Changes to pink-red on hover */
 }
 
-/* Custom Cursor */
+/* Custom Cursor Styling */
 .custom-cursor {
     width: 32px;
     height: 32px;
@@ -55,7 +48,13 @@ body {
     transition: transform 0.1s;
 }
 
-/* Hero Section */
+/* General Button Styling */
+button {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* All buttons use Comic Sans */
+    font-weight: bold;
+}
+
+/* Hero Section Styling */
 .hero-section {
     margin-top: 2rem;
     background-color: rgba(173, 255, 2, 0.3); /* Subtle neon green background with opacity */
@@ -67,6 +66,7 @@ body {
 .hero-section h1 {
     font-size: 3rem;
     text-shadow: 2px 2px #000, 4px 4px #FFDD00; /* Shadow for depth with golden yellow */
+    color: white;
 }
 
 .hero-section p {
@@ -74,24 +74,25 @@ body {
     color: #FFDD00; /* Golden yellow for easy readability */
 }
 
-/* Button Styling */
-button {
-    background: #8F00FF; /* Purple for buttons */
+/* Surprise Button Styling */
+.surprise-button {
+    background: #8F00FF; /* Purple color */
     border: none;
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
+    border-radius: 30px; /* Rounded at the corners a lot */
     box-shadow: 3px 3px 5px #000;
     transition: transform 0.2s, background-color 0.3s;
 }
 
-button:hover {
+.surprise-button:hover {
     transform: scale(1.1);
     background-color: #FF006D; /* Change to pink-red on hover */
 }
 
-/* Popup Box Styling */
+/* Popup Styling */
 .popup {
     display: none;
     font-size: 2rem;
