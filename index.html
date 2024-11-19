@@ -1,10 +1,37 @@
-<html>
-    <head>
-        <title>My really cool website!</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedika's Tacky Cool Website - Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Custom Cursor Styling -->
+    <div class="custom-cursor" id="customCursor"></div>
 
+    <!-- Header with Navigation Links -->
+    <header class="main-header">
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="music.html">Music</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <body>
-        <h1>Cool!</h1>
-    </body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Welcome to the Best of the 2000s!</h1>
+        <p>Experience the bling, gradients, and magic of early internet days! ✨</p>
+        <button onclick="showPopup()">Click Me for a Surprise!</button>
+        <div class="popup" id="popup">You've unlocked something amazing!</div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
 </html>
