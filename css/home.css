@@ -1,0 +1,38 @@
+.hero-section {
+    margin-top: 2rem;
+    animation: bounce 2s infinite;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px #000, 4px 4px #ff00ff;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+}
+
+button {
+    background: #ff69b4;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #000;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.popup {
+    display: none;
+    font-size: 2rem;
+    background: #00ff00;
+    color: #000;
+    padding: 1rem;
+    margin-top: 2rem;
+    box-shadow: 5px 5px 5px #000;
+}
