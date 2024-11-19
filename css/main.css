@@ -1,0 +1,45 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    cursor: url('../assets/cursors/custom_cursor.png'), auto;  /* Custom Cursor */
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.nav-bar {
+    background: #ff69b4;
+    padding: 1rem;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar li {
+    margin: 0 1rem;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.nav-bar a:hover {
+    color: yellow;
+}
+
+.custom-cursor {
+    width: 32px;
+    height: 32px;
+    background-image: url('../assets/cursors/custom_cursor.png');
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    transition: transform 0.1s;
+}
