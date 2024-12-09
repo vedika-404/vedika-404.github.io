@@ -1,6 +1,6 @@
 /* Import Fonts */
 @font-face {
-    font-family: 'Rocketpopchrome';
+    font-family: 'rocketpopchrome';
     src: url('../fonts/rocketpopchrome.otf') format('opentype'); /* Lowercase filename */
 }
 
@@ -13,7 +13,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Rocketpopchrome', cursive;
+    font-family: 'rocketpopchrome', cursive;
     background-color: #000;
     overflow: hidden;
     color: #fff;
@@ -45,7 +45,7 @@ body, html {
 
 /* Title and Subtext */
 .main-title {
-    font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
+    font-family: 'rocketpopchrome', cursive; /* Ensure proper font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
     text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc; /* Subtle glow */
@@ -92,7 +92,7 @@ body, html {
 }
 
 .menu-link {
-    font-family: 'Rocketpopchrome', cursive; /* Correct font */
+    font-family: 'rocketpopchrome', cursive; /* Correct font */
     color: #f5f5dc; /* Cream by default */
     text-decoration: none;
     font-size: 1.5rem;
