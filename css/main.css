@@ -1,7 +1,7 @@
 /* Import Fonts */
 @font-face {
-    font-family: 'rocketpopchrome';
-    src: url('../fonts/rocketpopchrome.otf') format('opentype'); /* Lowercase filename */
+    font-family: 'Rocketpopchrome';
+    src: url('../fonts/rocketpopchrome.otf') format('opentype');
 }
 
 @font-face {
@@ -13,7 +13,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'rocketpopchrome', cursive;
+    font-family: 'Rocketpopchrome', cursive;
     background-color: #000;
     overflow: hidden;
     color: #fff;
@@ -45,10 +45,10 @@ body, html {
 
 /* Title and Subtext */
 .main-title {
-    font-family: 'rocketpopchrome', cursive; /* Ensure proper font */
+    font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc; /* Subtle glow */
+    text-shadow: 0 0 3px #f5f5dc, 0 0 5px #f5f5dc; /* Reduced glow */
     margin-bottom: 1rem;
 }
 
@@ -56,7 +56,7 @@ body, html {
     font-family: 'BMarmy', sans-serif;
     font-size: 1.2rem;
     color: #f5f5dc;
-    text-shadow: 0 0 5px #f5f5dc;
+    text-shadow: 0 0 3px #f5f5dc;
 }
 
 /* Sliding Menu */
@@ -92,7 +92,7 @@ body, html {
 }
 
 .menu-link {
-    font-family: 'rocketpopchrome', cursive; /* Correct font */
+    font-family: 'Rocketpopchrome', cursive; /* Correct font */
     color: #f5f5dc; /* Cream by default */
     text-decoration: none;
     font-size: 1.5rem;
