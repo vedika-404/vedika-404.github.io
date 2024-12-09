@@ -3,61 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>your new favourite place :)</title>
+    <title>this tab rules!</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/home.css">
-
-    <!-- Balloons.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/balloons-js@1.0.0/dist/balloons.min.js"></script>
 </head>
 <body>
-    <!-- Custom Cursor Styling -->
-    <div class="custom-cursor" id="customCursor"></div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="tenor-gif-embed" data-postid="17203234" data-share-method="host" data-aspect-ratio="1.78771" data-width="100%">
+            <a href="https://tenor.com/view/loop-warp-portal-vortex-face-gif-17203234">Loop Warp GIF</a> from <a href="https://tenor.com/search/loop-gifs">Loop GIFs</a>
+        </div>
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
 
-    <!-- Header with Navigation Links -->
-    <header class="main-header">
-        <!-- Menu Button Placeholder -->
-        <button class="menu-button" id="menuButton">Menu</button>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1>THIS PLACE IS UNDER CONSTRUCTION</h1>
-        <p>work in progress i repeat work in progress fundamental changes to the website's personality being made.✨</p>
+    <!-- Home Page -->
+    <div class="home-page" id="homePage">
+        <h1>work in progress i repeat work in progress fundamental changes to the website's personality being made.✨</h1>
         <button class="surprise-button" onclick="showPopup()">click me for a surprise!</button>
         <div class="popup" id="popup">hello.</div>
-    </section>
-
-    <!-- Script to initialize balloons -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            new Balloons({
-                amount: 20,  // Number of balloons to display
-                colors: ["#FF7D00", "#FFDD00", "#ADFF02", "#01BEFE", "#8F00FF", "#FF006D"], // Custom colors
-                popOnClick: true, // Pop effect on click
-            });
-
-            // Custom Cursor Script
-            const cursor = document.getElementById('customCursor');
-            document.addEventListener('mousemove', function(e) {
-                cursor.style.left = (e.pageX - 16) + 'px';  // Centers cursor
-                cursor.style.top = (e.pageY - 16) + 'px';
-            });
-
-            // Optional: Add hover effect for buttons
-            const buttons = document.querySelectorAll('button');
-            buttons.forEach(button => {
-                button.addEventListener('mouseenter', () => {
-                    cursor.style.transform = 'scale(1.5)';
-                });
-                button.addEventListener('mouseleave', () => {
-                    cursor.style.transform = 'scale(1)';
-                });
-            });
-        });
-    </script>
+    </div>
 
     <script src="js/main.js"></script>
-    <script src="js/home.js"></script>
 </body>
 </html>
