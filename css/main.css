@@ -1,3 +1,4 @@
+/* Font Definitions */
 @font-face {
     font-family: 'Rocketpopchrome';
     src: url('../fonts/Rocketpopchrome.otf') format('opentype');
@@ -16,6 +17,7 @@ body, html {
     background-color: #000;
     overflow: hidden;
     color: #fff;
+    text-align: center;
 }
 
 /* Background Video */
@@ -26,102 +28,21 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.5); /* Dim the background video */
+    filter: brightness(0.5); /* Dim the neon background */
     z-index: -1;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
 }
 
 /* Title and Subtext */
 .main-title {
     font-size: 4rem;
-    color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 10px #f5f5dc, 0 0 20px #f5f5dc;
-    margin-top: 20vh;
-}
-
-.sub-text {
-    font-family: 'BMarmy', sans-serif;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    color: #f5f5dc;
-    text-shadow: 0 0 10px #f5f5dc;
-}
-
-/* Sliding Menu */
-.menu-screen {
-    position: fixed;
-    top: 0;
-    right: -50%; /* Hidden by default */
-    width: 50%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Translucent black */
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.5s ease-in-out;
-    z-index: 1000;
-}
-
-.menu-screen.active {
-    transform: translateX(-50%); /* Slide into view */
-}
-
-/* Menu Links */
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-.menu li {
-    margin: 1.5rem 0;
-}
-
-.menu-link {
-    font-family: 'BMarmy', sans-serif;
-    color: #f5f5dc; /* Cream */
-    text-decoration: none;
-    font-size: 1.5rem;
-    text-shadow: 0 0 10px #f5f5dc;
-    transition: text-shadow 0.3s ease, color 0.3s ease;
-}
-
-/* Hover Colors */
-.menu-link:nth-child(1):hover {
-    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
-    color: #01BEFE;
-}
-
-.menu-link:nth-child(2):hover {
-    text-shadow: 0 0 10px #FF006D, 0 0 20px #FF006D; /* Neon Pink */
-    color: #FF006D;
-}
-
-.menu-link:nth-child(3):hover {
-    text-shadow: 0 0 10px #8F00FF, 0 0 20px #8F00FF; /* Neon Purple */
-    color: #8F00FF;
-}
-
-.menu-link:nth-child(4):hover {
-    text-shadow: 0 0 10px #FF7D00, 0 0 20px #FF7D00; /* Neon Red */
-    color: #FF7D00;
-}
-
-/* Menu Toggle Button */
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
-    color: #f5f5dc;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1100;
-    transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-    transform: rotate(90deg); /* Rotate on hover */
-}
+   
