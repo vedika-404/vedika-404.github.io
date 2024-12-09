@@ -45,9 +45,10 @@ body, html {
 
 /* Title and Subtext */
 .main-title {
+    font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 10px #f5f5dc, 0 0 20px #f5f5dc;
+    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc; /* Subtle glow */
     margin-bottom: 1rem;
 }
 
@@ -55,7 +56,7 @@ body, html {
     font-family: 'BMarmy', sans-serif;
     font-size: 1.2rem;
     color: #f5f5dc;
-    text-shadow: 0 0 10px #f5f5dc;
+    text-shadow: 0 0 5px #f5f5dc;
 }
 
 /* Sliding Menu */
@@ -67,9 +68,10 @@ body, html {
     height: 100%;
     background: rgba(0, 0, 0, 0.8); /* Translucent black */
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Align to the left */
     align-items: center;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+    padding-left: 2rem;
     transition: transform 0.5s ease-in-out;
     z-index: 1000;
 }
@@ -82,7 +84,7 @@ body, html {
 .menu ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
 }
 
 .menu li {
@@ -98,9 +100,30 @@ body, html {
     transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
-.menu-link:hover {
-    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE; /* Enhanced neon blue glow */
+/* Hover Colors for Each Menu Item */
+.menu-link:nth-child(1):hover {
+    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE; /* Neon Blue */
     color: #01BEFE;
+}
+
+.menu-link:nth-child(2):hover {
+    text-shadow: 0 0 15px #FF006D, 0 0 30px #FF006D; /* Neon Pink */
+    color: #FF006D;
+}
+
+.menu-link:nth-child(3):hover {
+    text-shadow: 0 0 15px #8F00FF, 0 0 30px #8F00FF; /* Neon Purple */
+    color: #8F00FF;
+}
+
+.menu-link:nth-child(4):hover {
+    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00; /* Neon Red */
+    color: #FF7D00;
+}
+
+.menu-link:nth-child(5):hover {
+    text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02; /* Neon Green */
+    color: #ADFF02;
 }
 
 /* Menu Toggle Button */
