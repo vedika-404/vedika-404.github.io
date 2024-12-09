@@ -21,19 +21,9 @@ body, html {
 }
 
 /* Background GIF */
-#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.background-gif {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+body {
+    background: url('../homevid.gif') no-repeat center center fixed;
+    background-size: cover;
 }
 
 /* Container for Main Content */
