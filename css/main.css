@@ -1,7 +1,7 @@
 /* Import Fonts */
 @font-face {
     font-family: 'Rocketpopchrome';
-    src: url('../fonts/Rocketpopchrome.otf') format('opentype');
+    src: url('../fonts/rocketpopchrome.otf') format('opentype');
 }
 
 @font-face {
@@ -17,19 +17,23 @@ body, html {
     background-color: #000;
     overflow: hidden;
     color: #fff;
+    height: 100%;
 }
 
-/* Background Video */
-#backgroundVideo {
+/* Background GIF */
+#background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(0.7); /* Less dim for the background video */
-    z-index: -1; /* Slightly brighter video background */
     z-index: -1;
+}
+
+.background-gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Container for Main Content */
@@ -49,7 +53,7 @@ body, html {
     font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 3px #f5f5dc, 0 0 6px #f5f5dc; /* Reduced glow */
+    text-shadow: 0 0 3px #FF7D00, 0 0 5px #FF7D00; /* Reduced glow */
     margin-bottom: 1rem;
 }
 
@@ -57,7 +61,7 @@ body, html {
     font-family: 'BMarmy', sans-serif;
     font-size: 1.2rem;
     color: #f5f5dc;
-    text-shadow: 0 0 5px #f5f5dc;
+    text-shadow: 0 0 3px #f5f5dc;
 }
 
 /* Sliding Menu */
@@ -98,7 +102,24 @@ body, html {
     text-decoration: none;
     font-size: 1.5rem;
     text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
+    position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Underline Animation */
+.menu-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #01BEFE;
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
 }
 
 /* Hover Colors for Each Menu Item */
@@ -133,14 +154,4 @@ body, html {
     top: 20px;
     right: 20px;
     background: none;
-    color: #f5f5dc;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1100;
-    transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-    transform: rotate(90deg); /* Rotate on hover */
-}
+    color: #f5
