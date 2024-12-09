@@ -22,7 +22,7 @@ body, html {
 
 /* Background GIF */
 body {
-    background: url('../homevid.gif') no-repeat center center fixed;
+    background: url('../assets/homevid.gif') no-repeat center center fixed;
     background-size: cover;
 }
 
