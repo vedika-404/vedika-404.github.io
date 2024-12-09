@@ -19,28 +19,19 @@ body, html {
     color: #fff;
     height: 100%;
 }
-
-/* Background GIF */
-body {
-    background: url('../assets/homevid.gif') no-repeat center center fixed;
-    background-size: cover; /* Ensures the GIF covers the entire screen */
-    position: relative; /* Required for the pseudo-element */
-    overflow: hidden; /* Ensures no unwanted scrollbars */
-}
-
-/* Dimming Effect */
-body::before {
-    content: '';
+/* Background Wrapper with GIF and Dimming Effect */
+.background-wrapper {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* Slight dimming effect */
-    z-index: 0; /* Place it below content but above the GIF */
-    pointer-events: none; /* Ensures it doesn't block interaction */
+    background: url('../assets/homevid.gif') no-repeat center center fixed;
+    background-size: cover; /* Ensures the GIF covers the screen */
+    z-index: -1; /* Ensure it's behind all content */
+    pointer-events: none; /* Prevent interaction */
+    filter: brightness(0.8); /* Slight dimming effect */
 }
-
 
 /* Container for Main Content */
 .container {
@@ -171,3 +162,17 @@ body::before {
 .menu-toggle:hover {
     transform: rotate(90deg); /* Rotate on hover */
 }
+/* Background Wrapper with GIF and Dimming Effect */
+.background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../assets/homevid.gif') no-repeat center center fixed;
+    background-size: cover; /* Ensures the GIF covers the screen */
+    z-index: -1; /* Ensure it's behind all content */
+    pointer-events: none; /* Prevent interaction */
+    filter: brightness(0.8); /* Slight dimming effect */
+}
+
