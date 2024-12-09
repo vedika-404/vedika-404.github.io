@@ -9,17 +9,7 @@
     src: url('../fonts/BMarmy.TTF') format('truetype');
 }
 
-/* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Rocketpopchrome', cursive;
-    background-color: #000;
-    overflow: hidden;
-    color: #fff;
-    height: 100%;
-}
-/* Background Wrapper with GIF and Dimming Effect */
+/* Background Wrapper with GIF */
 .background-wrapper {
     position: fixed;
     top: 0;
@@ -30,30 +20,28 @@ body, html {
     background-size: cover; /* Ensures the GIF covers the screen */
     z-index: -1; /* Ensure it's behind all content */
     pointer-events: none; /* Prevent interaction */
-    filter: brightness(0.4); /* Slight dimming effect */
 }
 
-/* Container for Main Content */
-.container {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh; /* Full height */
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rocketpopchrome', cursive;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
 }
 
-/* Title and Subtext */
+/* Main Title */
 .main-title {
-    font-family: 'Rocketpopchrome', cursive; /* Correct font */
+    font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 5px #FF7D00, 0 0 10px #FF7D00; /* Subtle glow */
+    text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Subtle glow */
     margin-bottom: 1rem;
 }
 
+/* Subtext */
 .sub-text {
     font-family: 'BMarmy', sans-serif;
     font-size: 1.2rem;
@@ -61,38 +49,7 @@ body, html {
     text-shadow: 0 0 5px #f5f5dc;
 }
 
-/* Sliding Menu */
-.menu-screen {
-    position: fixed;
-    top: 0;
-    right: -50%; /* Hidden by default */
-    width: 50%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Translucent black */
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
-    padding-left: 2rem;
-    transition: transform 0.5s ease-in-out;
-    z-index: 1000;
-}
-
-.menu-screen.active {
-    transform: translateX(-50%); /* Slide into view */
-}
-
 /* Menu Links */
-.menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    margin: 1.5rem 0;
-}
-
 .menu-link {
     font-family: 'Rocketpopchrome', cursive; /* Correct font */
     color: #f5f5dc; /* Cream text by default */
@@ -100,19 +57,6 @@ body, html {
     font-size: 1.5rem;
     position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
-}
-
-
-/* Hover Underline Animation */
-.menu-link::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: transparent; /* Default underline hidden */
-    transition: width 0.3s ease;
 }
 
 /* Default Glow for Each Menu Item */
@@ -129,7 +73,7 @@ body, html {
 }
 
 .menu-link:nth-child(4) {
-    text-shadow: 0 0 10px #FF7D00, 0 0 20px #FF7D00; /* Neon Red */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon Red */
 }
 
 .menu-link:nth-child(5) {
@@ -154,13 +98,50 @@ body, html {
 
 .menu-link:nth-child(4):hover {
     color: #FF7D00; /* Neon Red */
-    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00;
+    text-shadow: 0 0 15px #ff073a, 0 0 30px #ff073a;
 }
 
 .menu-link:nth-child(5):hover {
     color: #ADFF02; /* Neon Green */
     text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02;
 }
+
+/* Hover Underline Animation */
+.menu-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #f5f5dc; /* Default underline color */
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.menu-link:nth-child(1):hover::after {
+    background: #01BEFE; /* Blue underline */
+}
+
+.menu-link:nth-child(2):hover::after {
+    background: #FF006D; /* Pink underline */
+}
+
+.menu-link:nth-child(3):hover::after {
+    background: #8F00FF; /* Purple underline */
+}
+
+.menu-link:nth-child(4):hover::after {
+    background: #ff073a; /* Red underline */
+}
+
+.menu-link:nth-child(5):hover::after {
+    background: #ADFF02; /* Green underline */
+}
+
+.menu-link:hover::after {
+    width: 100%;
+}
+
 
 
 /* Menu Toggle Button */
