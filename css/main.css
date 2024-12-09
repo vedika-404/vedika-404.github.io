@@ -1,90 +1,67 @@
-/* Base Styling */
-body {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* All text in Comic Sans */
-    cursor: url('../assets/cursors/custom_cursor.png'), auto;  /* Custom Cursor */
-    background: linear-gradient(45deg, #01BEFE, #FFDD00, #FF7D00);
-    animation: bg-animation 10s infinite alternate;
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+    background-color: #000;
+    overflow: hidden;
+    color: #fff;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Black background for loading screen */
+    z-index: 9999;
+}
+
+/* Home Page */
+.home-page {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #8F00FF, #FF006D, #FF7D00, #01BEFE);
+    animation: grow 1s forwards;
     color: #fff;
     text-align: center;
-    margin: 0;
-}
-
-/* Animated Background */
-@keyframes bg-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Menu Button Styling */
-.menu-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #FF7D00;  /* Bright orange */
-    color: white;
-    border: none;
-    padding: 1rem;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 2px 2px 5px #000;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.3s;
-}
-
-.menu-button:hover {
-    transform: scale(1.1);
-    background-color: #FF006D; /* Changes to pink-red on hover */
-}
-
-/* Custom Cursor Styling */
-.custom-cursor {
-    width: 32px;
-    height: 32px;
-    background-image: url('../assets/cursors/custom_cursor.png');
-    position: absolute;
-    pointer-events: none;
-    z-index: 1000;
-    transition: transform 0.1s;
-}
-
-/* General Button Styling */
-button {
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* All buttons use Comic Sans */
-    font-weight: bold;
-}
-
-/* Hero Section Styling */
-.hero-section {
-    margin-top: 2rem;
-    background-color: rgba(173, 255, 2, 0.3); /* Subtle neon green background with opacity */
     padding: 2rem;
-    border: 5px solid #FF006D; /* Pink-red border */
-    animation: bounce 2s infinite;
 }
 
-.hero-section h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px #000, 4px 4px #FFDD00; /* Shadow for depth with golden yellow */
-    color: white;
+/* Grow Animation */
+@keyframes grow {
+    0% {
+        transform: scale(0) translate(-50%, -50%);
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
 }
 
-.hero-section p {
-    font-size: 1.5rem;
-    color: #FFDD00; /* Golden yellow for easy readability */
-}
-
-/* Surprise Button Styling */
+/* Surprise Button */
 .surprise-button {
-    background: #8F00FF; /* Purple color */
+    background: #FF7D00;
     border: none;
     padding: 1rem 2rem;
     font-size: 1.5rem;
     color: #fff;
     cursor: pointer;
-    border-radius: 30px; /* Rounded at the corners a lot */
+    border-radius: 30px; /* Rounded corners */
     box-shadow: 3px 3px 5px #000;
     transition: transform 0.2s, background-color 0.3s;
+    margin-top: 2rem;
 }
 
 .surprise-button:hover {
@@ -92,7 +69,7 @@ button {
     background-color: #FF006D; /* Change to pink-red on hover */
 }
 
-/* Popup Styling */
+/* Popup Box Styling */
 .popup {
     display: none;
     font-size: 2rem;
