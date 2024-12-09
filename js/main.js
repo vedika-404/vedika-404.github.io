@@ -6,5 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", () => {
         menuScreen.classList.toggle("active");
     });
-});
 
+    // Close the menu when clicking outside of it
+    document.addEventListener("click", (e) => {
+        if (!menuScreen.contains(e.target) && e.target !== menuToggle) {
+            menuScreen.classList.remove("active");
+        }
+    });
+});
