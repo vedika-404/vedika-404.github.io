@@ -1,7 +1,7 @@
 /* Import Fonts */
 @font-face {
     font-family: 'Rocketpopchrome';
-    src: url('../fonts/Rocketpopchrome.otf') format('opentype');
+    src: url('../fonts/rocketpopchrome.otf') format('opentype'); /* Lowercase filename */
 }
 
 @font-face {
@@ -97,7 +97,24 @@ body, html {
     text-decoration: none;
     font-size: 1.5rem;
     text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
+    position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Underline Animation */
+.menu-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #01BEFE;
+    transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+    width: 100%;
 }
 
 /* Hover Colors for Each Menu Item */
