@@ -2,80 +2,56 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Press Start 2P', cursive; /* Retro pixelated font */
+    font-family: 'Press Start 2P', cursive; /* Pixelated retro font */
     background-color: #000;
-    overflow: hidden;
-    color: #fff;
-}
-
-/* Loading Screen */
-.loading-screen {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #000; /* Black background for loading screen */
-    z-index: 9999;
-}
-
-/* Home Page */
-.home-page {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: scale(0) translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #8F00FF, #FF006D, #FF7D00, #01BEFE);
-    animation: grow 1s forwards;
     color: #fff;
     text-align: center;
-    padding: 2rem;
+    overflow: hidden;
 }
 
-/* Grow Animation */
-@keyframes grow {
-    0% {
-        transform: scale(0) translate(-50%, -50%);
+/* Smooth Transitions */
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    100% {
-        transform: scale(1) translate(-50%, -50%);
+    to {
+        opacity: 1;
     }
 }
 
-/* Surprise Button */
-.surprise-button {
-    background: #FF7D00;
-    border: none;
-    padding: 1rem 2rem;
+/* Links and Hover Effects */
+a {
+    color: #FF006D;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #01BEFE;
+}
+
+/* Menu Styling */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 1rem 0;
+}
+
+.menu a {
     font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 30px; /* Rounded corners */
-    box-shadow: 3px 3px 5px #000;
-    transition: transform 0.2s, background-color 0.3s;
-    margin-top: 2rem;
+    text-transform: uppercase;
 }
 
-.surprise-button:hover {
-    transform: scale(1.1);
-    background-color: #FF006D; /* Change to pink-red on hover */
-}
-
-/* Popup Box Styling */
-.popup {
-    display: none;
-    font-size: 2rem;
-    background: #ADFF02; /* Slightly toned-down neon green */
-    color: #000;
-    padding: 1rem;
+/* Footer */
+footer {
     margin-top: 2rem;
-    box-shadow: 5px 5px 5px #000;
+    font-size: 1rem;
+    color: #8F00FF;
 }
