@@ -1,16 +1,14 @@
-// Show the home page after 3 seconds
-document.addEventListener("DOMContentLoaded", function () {
-    const loadingScreen = document.getElementById("loadingScreen");
-    const homePage = document.getElementById("homePage");
-
-    setTimeout(() => {
-        loadingScreen.style.display = "none"; // Hide loading screen
-        homePage.style.display = "block"; // Show home page
-    }, 3000);
+// Smooth transition effects
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const href = link.getAttribute("href");
+            document.body.style.opacity = 0; // Fade out
+            setTimeout(() => {
+                window.location.href = href;
+            }, 500);
+        });
+    });
 });
-
-// Surprise Popup Function
-function showPopup() {
-    const popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
