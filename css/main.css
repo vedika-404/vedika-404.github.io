@@ -50,7 +50,7 @@ body, html {
     font-family: 'Rocketpopchrome', cursive; /* Correct font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc; /* Subtle glow */
+    text-shadow: 0 0 5px #FF7D00, 0 0 10px #FF7D00; /* Subtle glow */
     margin-bottom: 1rem;
 }
 
@@ -95,10 +95,10 @@ body, html {
 
 .menu-link {
     font-family: 'Rocketpopchrome', cursive; /* Correct font */
-    color: #f5f5dc; /* Cream by default */
+    color: #f5f5dc; /* Cream text by default */
     text-decoration: none;
     font-size: 1.5rem;
-    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
+    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Default neon blue glow */
     position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
 }
@@ -111,38 +111,59 @@ body, html {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #01BEFE;
+    background: transparent; /* Default underline hidden */
     transition: width 0.3s ease;
 }
 
 .menu-link:hover::after {
-    width: 100%;
+    width: 100%; /* Expand underline on hover */
+}
+
+/* Default Glow for Each Menu Item */
+.menu-link:nth-child(1) {
+    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
+}
+
+.menu-link:nth-child(2) {
+    text-shadow: 0 0 10px #FF006D, 0 0 20px #FF006D; /* Neon Pink */
+}
+
+.menu-link:nth-child(3) {
+    text-shadow: 0 0 10px #8F00FF, 0 0 20px #8F00FF; /* Neon Purple */
+}
+
+.menu-link:nth-child(4) {
+    text-shadow: 0 0 10px #FF7D00, 0 0 20px #FF7D00; /* Neon Red */
+}
+
+.menu-link:nth-child(5) {
+    text-shadow: 0 0 10px #ADFF02, 0 0 20px #ADFF02; /* Neon Green */
 }
 
 /* Hover Colors for Each Menu Item */
 .menu-link:nth-child(1):hover {
-    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE; /* Neon Blue */
-    color: #01BEFE;
+    color: #01BEFE; /* Neon Blue */
+    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE;
 }
 
 .menu-link:nth-child(2):hover {
-    text-shadow: 0 0 15px #FF006D, 0 0 30px #FF006D; /* Neon Pink */
-    color: #FF006D;
+    color: #FF006D; /* Neon Pink */
+    text-shadow: 0 0 15px #FF006D, 0 0 30px #FF006D;
 }
 
 .menu-link:nth-child(3):hover {
-    text-shadow: 0 0 15px #8F00FF, 0 0 30px #8F00FF; /* Neon Purple */
-    color: #8F00FF;
+    color: #8F00FF; /* Neon Purple */
+    text-shadow: 0 0 15px #8F00FF, 0 0 30px #8F00FF;
 }
 
 .menu-link:nth-child(4):hover {
-    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00; /* Neon Red */
-    color: #FF7D00;
+    color: #FF7D00; /* Neon Red */
+    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00;
 }
 
 .menu-link:nth-child(5):hover {
-    text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02; /* Neon Green */
-    color: #ADFF02;
+    color: #ADFF02; /* Neon Green */
+    text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02;
 }
 
 /* Menu Toggle Button */
@@ -161,18 +182,5 @@ body, html {
 
 .menu-toggle:hover {
     transform: rotate(90deg); /* Rotate on hover */
-}
-/* Background Wrapper with GIF and Dimming Effect */
-.background-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../assets/homevid.gif') no-repeat center center fixed;
-    background-size: cover; /* Ensures the GIF covers the screen */
-    z-index: -1; /* Ensure it's behind all content */
-    pointer-events: none; /* Prevent interaction */
-    filter: brightness(0.8); /* Slight dimming effect */
 }
 
