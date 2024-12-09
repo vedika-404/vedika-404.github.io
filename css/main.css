@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Rocketpopchrome';
+    src: url('../fonts/Rocketpopchrome.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'BMarmy';
+    src: url('../fonts/BMarmy.TTF') format('truetype');
+}
+
 /* General Reset */
 body, html {
     margin: 0;
