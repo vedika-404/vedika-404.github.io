@@ -48,12 +48,12 @@ body, html {
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
     text-shadow: 0 0 10px #f5f5dc, 0 0 20px #f5f5dc;
+    margin-bottom: 1rem;
 }
 
 .sub-text {
     font-family: 'BMarmy', sans-serif;
     font-size: 1.2rem;
-    margin-top: 1rem;
     color: #f5f5dc;
     text-shadow: 0 0 10px #f5f5dc;
 }
@@ -66,7 +66,6 @@ body, html {
     width: 50%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8); /* Translucent black */
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,33 +90,17 @@ body, html {
 }
 
 .menu-link {
-    font-family: 'BMarmy', sans-serif;
-    color: #f5f5dc; /* Cream */
+    font-family: 'Rocketpopchrome', cursive; /* Correct font */
+    color: #f5f5dc; /* Cream by default */
     text-decoration: none;
     font-size: 1.5rem;
-    text-shadow: 0 0 10px #f5f5dc;
+    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
     transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
-/* Hover Colors */
-.menu-link:nth-child(1):hover {
-    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
+.menu-link:hover {
+    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE; /* Enhanced neon blue glow */
     color: #01BEFE;
-}
-
-.menu-link:nth-child(2):hover {
-    text-shadow: 0 0 10px #FF006D, 0 0 20px #FF006D; /* Neon Pink */
-    color: #FF006D;
-}
-
-.menu-link:nth-child(3):hover {
-    text-shadow: 0 0 10px #8F00FF, 0 0 20px #8F00FF; /* Neon Purple */
-    color: #8F00FF;
-}
-
-.menu-link:nth-child(4):hover {
-    text-shadow: 0 0 10px #FF7D00, 0 0 20px #FF7D00; /* Neon Red */
-    color: #FF7D00;
 }
 
 /* Menu Toggle Button */
