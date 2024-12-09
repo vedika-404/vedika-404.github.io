@@ -30,7 +30,7 @@ body, html {
     background-size: cover; /* Ensures the GIF covers the screen */
     z-index: -1; /* Ensure it's behind all content */
     pointer-events: none; /* Prevent interaction */
-    filter: brightness(0.8); /* Slight dimming effect */
+    filter: brightness(0.4); /* Slight dimming effect */
 }
 
 /* Container for Main Content */
