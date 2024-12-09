@@ -1,17 +1,16 @@
-// Custom Cursor Script
-document.addEventListener('mousemove', function(e) {
-    const cursor = document.getElementById('customCursor');
-    cursor.style.left = (e.pageX - 16) + 'px';  // Centers cursor
-    cursor.style.top = (e.pageY - 16) + 'px';
+// Show the home page after 3 seconds
+document.addEventListener("DOMContentLoaded", function () {
+    const loadingScreen = document.getElementById("loadingScreen");
+    const homePage = document.getElementById("homePage");
+
+    setTimeout(() => {
+        loadingScreen.style.display = "none"; // Hide loading screen
+        homePage.style.display = "block"; // Show home page
+    }, 3000);
 });
 
-// Optional: Add hover effect for buttons
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', () => {
-        document.getElementById('customCursor').style.transform = 'scale(1.5)';
-    });
-    button.addEventListener('mouseleave', () => {
-        document.getElementById('customCursor').style.transform = 'scale(1)';
-    });
-});
+// Surprise Popup Function
+function showPopup() {
+    const popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
