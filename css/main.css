@@ -48,7 +48,7 @@ body, html {
     font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 3px #f5f5dc, 0 0 5px #f5f5dc; /* Reduced glow */
+    text-shadow: 0 0 2px #f5f5dc, 0 0 2px #f5f5dc; /* Reduced glow */
     margin-bottom: 1rem;
 }
 
