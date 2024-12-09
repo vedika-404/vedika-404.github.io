@@ -1,18 +1,8 @@
-@font-face {
-    font-family: 'Rocketpopchrome';
-    src: url('../fonts/Rocketpopchrome.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'BMarmy';
-    src: url('../fonts/BMarmy.TTF') format('truetype');
-}
-
 /* General Reset */
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Rocketpopchrome', cursive; /* Default font */
+    font-family: 'Rocketpopchrome', cursive;
     background-color: #000;
     overflow: hidden;
     color: #fff;
@@ -26,7 +16,7 @@ body, html {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.5); /* Dim the neon background */
+    filter: brightness(0.5); /* Dim the background video */
     z-index: -1;
 }
 
