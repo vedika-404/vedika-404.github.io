@@ -1,14 +1,9 @@
-// Smooth transition effects
 document.addEventListener("DOMContentLoaded", () => {
-    const links = document.querySelectorAll("a");
-    links.forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            const href = link.getAttribute("href");
-            document.body.style.opacity = 0; // Fade out
-            setTimeout(() => {
-                window.location.href = href;
-            }, 500);
-        });
+    const menuToggle = document.getElementById("menuToggle");
+    const menuScreen = document.getElementById("menuScreen");
+
+    // Toggle the menu on button click
+    menuToggle.addEventListener("click", () => {
+        menuScreen.classList.toggle("active");
     });
 });
