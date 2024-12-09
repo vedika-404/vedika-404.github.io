@@ -24,7 +24,11 @@ body, html {
 body {
     background: url('../assets/homevid.gif') no-repeat center center fixed;
     background-size: cover; /* Ensures the GIF covers the entire screen */
+    position: relative; /* Required for the pseudo-element */
+    overflow: hidden; /* Ensures no unwanted scrollbars */
 }
+
+/* Dimming Effect */
 body::before {
     content: '';
     position: fixed;
@@ -32,9 +36,11 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slight dimming effect */
-    z-index: -1; /* Ensure it sits behind the content */
+    background: rgba(0, 0, 0, 0.2); /* Slight dimming effect */
+    z-index: 0; /* Place it below content but above the GIF */
+    pointer-events: none; /* Ensures it doesn't block interaction */
 }
+
 
 /* Container for Main Content */
 .container {
