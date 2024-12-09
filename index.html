@@ -5,40 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>this tab rules!</title>
     <link rel="stylesheet" href="css/main.css">
-    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
-        <div class="tenor-gif-embed" data-postid="17203234" data-share-method="host" data-aspect-ratio="1.78771" data-width="100%">
-            <a href="https://tenor.com/view/loop-warp-portal-vortex-face-gif-17203234">Loop Warp GIF</a> from <a href="https://tenor.com/search/loop-gifs">Loop GIFs</a>
-        </div>
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1 class="main-title">welcome to my world</h1>
+            <p class="sub-text">this page is under construction fundamental changes being made to the website's personality ✨</p>
+        </header>
+        <nav class="menu">
+            <ul>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="#">blah</a></li>
+                <li><a href="#">la</a></li>
+                <li><a href="#">dee</a></li>
+                <li><a href="#">da</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <!-- Home Page -->
-    <div class="home-page" id="homePage">
-        <h1>work in progress i repeat work in progress fundamental changes to the website's personality being made.✨</h1>
-        <button class="surprise-button" onclick="showPopup()">click me for a surprise!</button>
-        <div class="popup" id="popup">hello.</div>
-    </div>
-
-    <script>
-        // Show the home page after 3 seconds
-        document.addEventListener("DOMContentLoaded", function () {
-            const loadingScreen = document.getElementById("loadingScreen");
-            const homePage = document.getElementById("homePage");
-
-            setTimeout(() => {
-                loadingScreen.style.display = "none"; // Hide loading screen
-                homePage.style.display = "flex"; // Show home page
-            }, 3000);
-        });
-
-        // Surprise Popup Function
-        function showPopup() {
-            const popup = document.getElementById("popup");
-            popup.style.display = "block";
-        }
-    </script>
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>
