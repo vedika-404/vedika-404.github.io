@@ -7,3 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
         menuScreen.classList.toggle("active");
     });
 });
+
