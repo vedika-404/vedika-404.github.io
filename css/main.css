@@ -86,14 +86,21 @@ body {
     margin: 1.5rem 0;
 }
 
+/* Menu Links */
 .menu-link {
     font-family: 'Rocketpopchrome', cursive; /* Correct font */
     color: #f5f5dc; /* Cream by default */
     text-decoration: none;
     font-size: 1.5rem;
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon RED */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow by default */
     position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.menu-link:hover {
+    color: #ff073a; /* Red text */
+    text-shadow: 0 0 15px #ff073a, 0 0 30px #ff073a; /* Intense red glow */
 }
 
 /* Hover Underline Animation */
@@ -104,12 +111,12 @@ body {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #ff073a;
+    background: #ff073a; /* Red underline */
     transition: width 0.3s ease;
 }
 
 .menu-link:hover::after {
-    width: 100%;
+    width: 100%; /* Expand underline on hover */
 }
 
 /* Menu Toggle Button */
