@@ -14,34 +14,52 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Rocketpopchrome', cursive;
+    background-color: #000;
+    overflow: hidden;
     color: #fff;
     height: 100%;
-    overflow: hidden;
 }
 
-/* Background GIF */
-body {
+/* Background Wrapper with GIF and Dimming Effect */
+.background-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: url('../assets/homevid.gif') no-repeat center center fixed;
     background-size: cover; /* Ensures the GIF covers the screen */
+    z-index: -1; /* Ensure it's behind all content */
+    pointer-events: none; /* Prevent interaction */
+    filter: brightness(0.8); /* Slight dimming effect */
 }
 
-/* Main Title */
+/* Container for Main Content */
+.container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full height */
+}
+
+/* Title and Subtext */
 .main-title {
-    font-family: 'Rocketpopchrome', cursive;
+    font-family: 'Rocketpopchrome', cursive; /* Correct font */
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
     text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc; /* Subtle glow */
     margin-bottom: 1rem;
-    text-align: center;
 }
 
-/* Subtext */
 .sub-text {
     font-family: 'BMarmy', sans-serif;
     font-size: 1.2rem;
     color: #f5f5dc;
     text-shadow: 0 0 5px #f5f5dc;
-    text-align: center;
 }
 
 /* Sliding Menu */
@@ -53,73 +71,37 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.8); /* Translucent black */
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Align to the left */
     align-items: center;
-    padding-left: 2rem;
     box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
+    padding-left: 2rem;
     transition: transform 0.5s ease-in-out;
+    z-index: 1000;
 }
 
 .menu-screen.active {
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Slide into view */
 }
 
 /* Menu Links */
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin: 1.5rem 0;
+}
+
 .menu-link {
-    font-family: 'Rocketpopchrome', cursive;
+    font-family: 'Rocketpopchrome', cursive; /* Correct font */
     color: #f5f5dc; /* Cream by default */
     text-decoration: none;
     font-size: 1.5rem;
+    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
     position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
-}
-
-/* Default Neon Glow */
-.menu-link:nth-child(1) {
-    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE;
-}
-
-.menu-link:nth-child(2) {
-    text-shadow: 0 0 10px #FF006D, 0 0 20px #FF006D;
-}
-
-.menu-link:nth-child(3) {
-    text-shadow: 0 0 10px #8F00FF, 0 0 20px #8F00FF;
-}
-
-.menu-link:nth-child(4) {
-    text-shadow: 0 0 10px #FF7D00, 0 0 20px #FF7D00;
-}
-
-.menu-link:nth-child(5) {
-    text-shadow: 0 0 10px #ADFF02, 0 0 20px #ADFF02;
-}
-
-/* Hover Effects */
-.menu-link:nth-child(1):hover {
-    color: #01BEFE; /* Neon Blue */
-    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE;
-}
-
-.menu-link:nth-child(2):hover {
-    color: #FF006D; /* Neon Pink */
-    text-shadow: 0 0 15px #FF006D, 0 0 30px #FF006D;
-}
-
-.menu-link:nth-child(3):hover {
-    color: #8F00FF; /* Neon Purple */
-    text-shadow: 0 0 15px #8F00FF, 0 0 30px #8F00FF;
-}
-
-.menu-link:nth-child(4):hover {
-    color: #FF7D00; /* Neon Red */
-    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00;
-}
-
-.menu-link:nth-child(5):hover {
-    color: #ADFF02; /* Neon Green */
-    text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02;
 }
 
 /* Hover Underline Animation */
@@ -130,30 +112,54 @@ body {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #f5f5dc; /* Default cream underline */
+    background: #01BEFE;
     transition: width 0.3s ease;
-}
-
-.menu-link:nth-child(1):hover::after {
-    background: #01BEFE; /* Blue underline */
-}
-
-.menu-link:nth-child(2):hover::after {
-    background: #FF006D; /* Pink underline */
-}
-
-.menu-link:nth-child(3):hover::after {
-    background: #8F00FF; /* Purple underline */
-}
-
-.menu-link:nth-child(4):hover::after {
-    background: #FF7D00; /* Red underline */
-}
-
-.menu-link:nth-child(5):hover::after {
-    background: #ADFF02; /* Green underline */
 }
 
 .menu-link:hover::after {
     width: 100%;
+}
+
+/* Hover Colors for Each Menu Item */
+.menu-link:nth-child(1):hover {
+    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE; /* Neon Blue */
+    color: #01BEFE;
+}
+
+.menu-link:nth-child(2):hover {
+    text-shadow: 0 0 15px #FF006D, 0 0 30px #FF006D; /* Neon Pink */
+    color: #FF006D;
+}
+
+.menu-link:nth-child(3):hover {
+    text-shadow: 0 0 15px #8F00FF, 0 0 30px #8F00FF; /* Neon Purple */
+    color: #8F00FF;
+}
+
+.menu-link:nth-child(4):hover {
+    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00; /* Neon Red */
+    color: #FF7D00;
+}
+
+.menu-link:nth-child(5):hover {
+    text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02; /* Neon Green */
+    color: #ADFF02;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    color: #f5f5dc;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: rotate(90deg); /* Rotate on hover */
 }
