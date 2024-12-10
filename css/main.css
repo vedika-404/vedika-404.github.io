@@ -104,38 +104,12 @@ body {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #01BEFE;
+    background: #ff073a;
     transition: width 0.3s ease;
 }
 
 .menu-link:hover::after {
     width: 100%;
-}
-
-/* Hover Colors for Each Menu Item */
-.menu-link:nth-child(1):hover {
-    text-shadow: 0 0 15px #01BEFE, 0 0 30px #01BEFE; /* Neon Blue */
-    color: #01BEFE;
-}
-
-.menu-link:nth-child(2):hover {
-    text-shadow: 0 0 15px #FF006D, 0 0 30px #FF006D; /* Neon Pink */
-    color: #FF006D;
-}
-
-.menu-link:nth-child(3):hover {
-    text-shadow: 0 0 15px #8F00FF, 0 0 30px #8F00FF; /* Neon Purple */
-    color: #8F00FF;
-}
-
-.menu-link:nth-child(4):hover {
-    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00; /* Neon Red */
-    color: #FF7D00;
-}
-
-.menu-link:nth-child(5):hover {
-    text-shadow: 0 0 15px #ADFF02, 0 0 30px #ADFF02; /* Neon Green */
-    color: #ADFF02;
 }
 
 /* Menu Toggle Button */
