@@ -9,19 +9,6 @@
     src: url('../fonts/BMarmy.TTF') format('truetype');
 }
 
-/* Background Wrapper with GIF */
-.background-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../assets/homevid.gif') no-repeat center center fixed;
-    background-size: cover; /* Ensures the GIF covers the screen */
-    z-index: -1; /* Ensure it's behind all content */
-    pointer-events: none; /* Prevent interaction */
-}
-
 /* General Reset */
 body, html {
     margin: 0;
@@ -32,13 +19,20 @@ body, html {
     overflow: hidden;
 }
 
+/* Background GIF */
+body {
+    background: url('../assets/homevid.gif') no-repeat center center fixed;
+    background-size: cover; /* Ensures the GIF covers the screen */
+}
+
 /* Main Title */
 .main-title {
-    font-family: 'Rocketpopchrome', cursive; /* Ensure proper font */
+    font-family: 'Rocketpopchrome', cursive;
     font-size: 4rem;
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Subtle glow */
+    text-shadow: 0 0 5px #f5f5dc, 0 0 10px #f5f5dc; /* Subtle glow */
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 /* Subtext */
@@ -47,37 +41,59 @@ body, html {
     font-size: 1.2rem;
     color: #f5f5dc;
     text-shadow: 0 0 5px #f5f5dc;
+    text-align: center;
+}
+
+/* Sliding Menu */
+.menu-screen {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Hidden by default */
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Translucent black */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: transform 0.5s ease-in-out;
+}
+
+.menu-screen.active {
+    transform: translateX(-50%);
 }
 
 /* Menu Links */
 .menu-link {
-    font-family: 'Rocketpopchrome', cursive; /* Correct font */
-    color: #f5f5dc; /* Cream text by default */
+    font-family: 'Rocketpopchrome', cursive;
+    color: #f5f5dc; /* Cream by default */
     text-decoration: none;
     font-size: 1.5rem;
     position: relative;
     transition: text-shadow 0.3s ease, color 0.3s ease;
 }
 
-/* Default Glow for Each Menu Item */
+/* Default Neon Glow */
 .menu-link:nth-child(1) {
-    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE; /* Neon Blue */
+    text-shadow: 0 0 10px #01BEFE, 0 0 20px #01BEFE;
 }
 
 .menu-link:nth-child(2) {
-    text-shadow: 0 0 10px #FF006D, 0 0 20px #FF006D; /* Neon Pink */
+    text-shadow: 0 0 10px #FF006D, 0 0 20px #FF006D;
 }
 
 .menu-link:nth-child(3) {
-    text-shadow: 0 0 10px #8F00FF, 0 0 20px #8F00FF; /* Neon Purple */
+    text-shadow: 0 0 10px #8F00FF, 0 0 20px #8F00FF;
 }
 
 .menu-link:nth-child(4) {
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon Red */
+    text-shadow: 0 0 10px #FF7D00, 0 0 20px #FF7D00;
 }
 
 .menu-link:nth-child(5) {
-    text-shadow: 0 0 10px #ADFF02, 0 0 20px #ADFF02; /* Neon Green */
+    text-shadow: 0 0 10px #ADFF02, 0 0 20px #ADFF02;
 }
 
 /* Hover Effects */
@@ -98,7 +114,7 @@ body, html {
 
 .menu-link:nth-child(4):hover {
     color: #FF7D00; /* Neon Red */
-    text-shadow: 0 0 15px #ff073a, 0 0 30px #ff073a;
+    text-shadow: 0 0 15px #FF7D00, 0 0 30px #FF7D00;
 }
 
 .menu-link:nth-child(5):hover {
@@ -114,8 +130,8 @@ body, html {
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: #f5f5dc; /* Default underline color */
-    transition: width 0.3s ease, background 0.3s ease;
+    background: #f5f5dc; /* Default cream underline */
+    transition: width 0.3s ease;
 }
 
 .menu-link:nth-child(1):hover::after {
@@ -131,7 +147,7 @@ body, html {
 }
 
 .menu-link:nth-child(4):hover::after {
-    background: #ff073a; /* Red underline */
+    background: #FF7D00; /* Red underline */
 }
 
 .menu-link:nth-child(5):hover::after {
@@ -141,24 +157,3 @@ body, html {
 .menu-link:hover::after {
     width: 100%;
 }
-
-
-
-/* Menu Toggle Button */
-.menu-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
-    color: #f5f5dc;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    z-index: 1100;
-    transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-    transform: rotate(90deg); /* Rotate on hover */
-}
-
