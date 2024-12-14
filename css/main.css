@@ -139,34 +139,24 @@ body {
     transform: rotate(90deg); /* Rotate on hover */
 }
 
-
-/* Updated Scrolling Text Section */
-.scrolling-text-section {
-    position: relative;
-    z-index: 2; /* Higher than GIF */
-    height: 200vh; /* Extra height for scrolling */
+/* Scrolling Section */
+.text-section {
+    height: 100vh; /* Full-screen height */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    text-align: center;
+    background-color: #000; /* Black background */
+    z-index: 1; /* Above GIF background */
+    position: relative;
 }
 
-/* Updated Scrolling Text Style */
 .scrolling-text {
-    font-family: 'Rocketpopchrome', cursive; /* Font consistency */
+    font-family: 'Rocketpopchrome', cursive; /* Rocketpop font */
     font-size: 2rem; /* Initial font size */
     color: #f5f5dc; /* Cream color */
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
-    white-space: nowrap; /* Prevent text wrapping */
-    position: absolute;
-    left: -100%; /* Start off-screen to the left */
-    top: 150%; /* Start below the visible screen */
-    transform: scale(1); /* Default scale */
-    transition: transform 0.1s ease-out; /* Smooth scaling */
-    will-change: transform; /* Optimize for animation */
-    left: -100%; /* Start off-screen to the left */
-    top: 150%; /* Start below the visible screen */
-    transform: translate(0, 100%) scale(1); /* Default position */
-    will-change: transform; /* Optimize for animation */
-    z-index: 3; /* Ensure above other elements */
+    margin: 0;
+    padding: 1rem;
 }
+
