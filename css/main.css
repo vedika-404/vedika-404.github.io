@@ -143,23 +143,23 @@ body {
 
 .scrolling-text-section {
     position: relative;
-    height: 200vh; /* Extra height for scrolling */
+    height: 100vh; /* Full-screen height */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: hidden; /* Prevent text overflow */
     z-index: 2; /* Ensure it is above the background */
 }
 
 .scrolling-text {
-    font-family: 'Rocketpopchrome', cursive; /* Font consistency */
+    font-family: 'Rocketpopchrome', cursive; /* Ensure font consistency */
     font-size: 2rem; /* Initial font size */
     color: #f5f5dc; /* Cream color */
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
     white-space: nowrap; /* Prevent text wrapping */
-    position: absolute;
-    left: 0; /* Ensure it's visible on the screen */
-    top: 100%; /* Start just below the visible area */
+    position: absolute; /* Allow movement through transform */
+    left: 0; /* Ensure it's visible on the screen horizontally */
+    top: 100%; /* Start below the viewport */
     transform: scale(1); /* Default scale */
-    z-index: 3; /* Ensure above other elements */
+    z-index: 3; /* Ensure it appears above other elements */
 }
