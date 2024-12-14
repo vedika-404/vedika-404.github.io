@@ -1,3 +1,5 @@
+console.log("JavaScript file loaded!");
+
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menuToggle");
     const menuScreen = document.getElementById("menuScreen");
