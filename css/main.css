@@ -139,36 +139,6 @@ body {
 
 /* Scrolling Text Section */
 .scrolling-text-section {
-    height: 100vh; /* Full height section */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden; /* Prevent horizontal scrollbars */
-    position: relative;
-    z-index: 1;
-}
-
-.scrolling-text-container {
-    position: absolute;
-    white-space: nowrap; /* Prevent text from breaking lines */
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-}
-
-.scrolling-text {
-    font-family: 'Rocketpopchrome', cursive; /* Use Rocketpopchrome font */
-    font-size: 2rem; /* Default size */
-    color: #f5f5dc; /* Cream text */
-    text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Subtle red glow */
-    animation: scrollText 10s linear infinite; /* Infinite scroll effect */
-    transform-origin: center; /* Ensure scaling centers text */
-    transition: transform 0.3s ease-in-out; /* Smooth scaling */
-}
-
-/* Scrolling Text Section */
-.scrolling-text-section {
     position: relative;
     height: 200vh; /* Extra height for scrolling effect */
     display: flex;
@@ -177,13 +147,14 @@ body {
     overflow: hidden;
 }
 
+/* Scrolling Text */
 .scrolling-text {
     font-family: 'Rocketpopchrome', cursive;
     font-size: 2rem; /* Default font size */
     white-space: nowrap; /* Prevent line breaks */
     color: #f5f5dc; /* Cream */
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Red neon glow */
-    position: fixed; /* Stay in place */
-    transform: translateY(0) scale(1); /* Initial position and scale */
-    transition: transform 0.2s ease; /* Smooth scaling */
+    position: absolute; /* Allow movement with scroll */
+    transform-origin: center; /* Ensure scaling centers text */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
