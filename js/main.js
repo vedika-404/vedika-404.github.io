@@ -16,6 +16,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
+    if (scrollingText) {
+        console.log(`Scroll Position: ${window.scrollY}`);
+        console.log(`Transform: ${scrollingText.style.transform}`);
+    } else {
+        console.error("Scrolling text element not found!");
+    }
+    const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
     // Scroll start and end thresholds
