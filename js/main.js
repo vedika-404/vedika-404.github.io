@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
-    // Home page height and transition thresholds
+    // Home page height and transition 
     const scrollStart = 1; // Slightly below home page
     const scrollEnd = 7; // End of the transformation
 
