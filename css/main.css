@@ -146,12 +146,14 @@ body {
     height: 100vh; /* Full-screen height */
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     text-align: center;
     background-color: #000; /* Black background */
     z-index: 1; /* Above GIF background */
     position: relative;
+    margin-top: 100vh; /* Push the text section below the home page */
 }
+
 
 .scrolling-text {
     font-family: 'Rocketpopchrome', cursive; /* Rocketpop font */
