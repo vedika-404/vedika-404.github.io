@@ -18,12 +18,17 @@ document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
-    // Determine vertical movement and scale
-    const translateY = Math.max(0, scrollPosition - 300); // Move into view after 300px scroll
-    const scale = Math.min(3, 1 + (scrollPosition - 300) / 300); // Gradually scale up to 3x
+    // Ensure scrolling starts after some distance (e.g., 300px)
+    const scrollStart = 300;
 
-    // Determine horizontal movement (scrolling left to right)
-    const translateX = Math.min(100, (scrollPosition - 300) / 3); // Stop moving at 100% from the left
+    // Vertical movement (translateY)
+    const translateY = Math.max(0, scrollPosition - scrollStart); // Text moves up into view
+
+    // Horizontal movement (translateX)
+    const translateX = Math.min(100, (scrollPosition - scrollStart) / 3); // Move from left to right
+
+    // Scaling
+    const scale = Math.min(3, 1 + (scrollPosition - scrollStart) / 300); // Gradually grow up to 3x size
 
     // Apply transformations
     scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
