@@ -141,24 +141,26 @@ body {
     transform: rotate(90deg); /* Rotate on hover */
 }
 
-/* Scrolling Section */
-.text-section {
-    height: 100vh; /* Full-screen height */
+/* Scrolling Text Section Updates */
+.scrolling-text-section {
+    position: relative;
+    height: 200vh; /* Extra height for scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    background-color: #000; /* Black background */
-    z-index: 1; /* Above GIF background */
-    position: relative;
+    overflow: hidden;
 }
 
+/* Scrolling Text Style */
 .scrolling-text {
-    font-family: 'Rocketpopchrome', cursive; /* Rocketpop font */
+    font-family: 'Rocketpopchrome', cursive; /* Ensure font is consistent */
     font-size: 2rem; /* Initial font size */
     color: #f5f5dc; /* Cream color */
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
-    margin: 0;
-    padding: 1rem;
+    white-space: nowrap; /* Prevent text wrapping */
+    position: absolute;
+    left: -100%; /* Start off-screen to the left */
+    transform: translate(0, 100%) scale(1); /* Start below the screen, default scale */
+    transition: transform 0.1s ease-out; /* Smooth scaling */
+    will-change: transform; /* Optimize for animation */
 }
-
