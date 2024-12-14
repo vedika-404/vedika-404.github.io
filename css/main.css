@@ -159,10 +159,14 @@ body {
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
     white-space: nowrap; /* Prevent text wrapping */
     position: absolute;
-    z-index: 3; /* Ensure it’s above everything else */
     left: -100%; /* Start off-screen to the left */
     top: 150%; /* Start below the visible screen */
     transform: scale(1); /* Default scale */
     transition: transform 0.1s ease-out; /* Smooth scaling */
     will-change: transform; /* Optimize for animation */
+    left: -100%; /* Start off-screen to the left */
+    top: 150%; /* Start below the visible screen */
+    transform: translate(0, 100%) scale(1); /* Default position */
+    will-change: transform; /* Optimize for animation */
+    z-index: 3; /* Ensure above other elements */
 }
