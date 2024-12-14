@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const scrollPosition = window.scrollY;
 
             // Adjust start and end thresholds
-            const scrollStart = 100; // When the effect begins
+            const scrollStart = 1; // When the effect begins
             const scrollEnd = 500;  // When the effect ends
 
             // Ensure within range
