@@ -145,6 +145,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 2;
 }
 
 /* Scrolling Text */
@@ -158,3 +159,8 @@ body {
     transform-origin: center; /* Ensure scaling centers text */
     transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
+body, html {
+    overflow: visible;
+    height: auto;
+}
+
