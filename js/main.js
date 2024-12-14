@@ -18,20 +18,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
-    // Scroll start and scaling thresholds
-    const scrollStart = 300; // Adjust to when the effect should begin
-    const scrollEnd = 800; // Adjust to when the full effect ends
+    // Scroll start and end thresholds
+    const scrollStart = 300; // Start effect after scrolling 300px
+    const scrollEnd = 800;  // End effect at 800px
 
-    // Adjust transformations
     if (scrollPosition >= scrollStart && scrollPosition <= scrollEnd) {
-        const progress = (scrollPosition - scrollStart) / (scrollEnd - scrollStart); // Normalize to 0-1
-        const translateX = progress * 100; // Move text horizontally from left to right
-        const scale = 1 + progress * 2; // Scale text up to 3x its size
+        // Progress normalized between 0 and 1
+        const progress = (scrollPosition - scrollStart) / (scrollEnd - scrollStart);
 
-        scrollingText.style.transform = `translate(${translateX}%, 0) scale(${scale})`;
+        // Calculate transformations
+        const translateX = progress * 100; // Scroll to the right (down)
+        const translateY = 100 - progress * 100; // Move up
+        const scale = 1 + progress * 2; // Scale up to 3x size
+
+        // Apply transformations
+        scrollingText.style.transform = `translate(${translateX}%, -${translateY}%) scale(${scale})`;
     } else if (scrollPosition < scrollStart) {
-        // Reset to initial state when scrolling up
+        // Reset position and scale when scrolling back up above start
         scrollingText.style.transform = "translate(0, 100%) scale(1)";
+    } else if (scrollPosition > scrollEnd) {
+        // Stop transformations at their final state when scrolling past the end
+        scrollingText.style.transform = "translate(100%, -100%) scale(3)";
+    }
+});
 
     });
 });
