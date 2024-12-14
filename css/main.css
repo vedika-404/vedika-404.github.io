@@ -138,7 +138,7 @@ body {
 }
 
 
-/* Scrolling Text Section */
+/* Updated Scrolling Text Section */
 .scrolling-text-section {
     position: relative;
     height: 200vh; /* Extra height for scrolling */
@@ -148,16 +148,17 @@ body {
     overflow: hidden;
 }
 
-/* Scrolling Text */
+/* Updated Scrolling Text Style */
 .scrolling-text {
-    font-family: 'Rocketpopchrome', cursive;
-    font-size: 2rem; /* Default font size */
-    color: #f5f5dc; /* Cream */
+    font-family: 'Rocketpopchrome', cursive; /* Font consistency */
+    font-size: 2rem; /* Initial font size */
+    color: #f5f5dc; /* Cream color */
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
     white-space: nowrap; /* Prevent text wrapping */
     position: absolute;
-    top: 150%; /* Start below visible screen */
     left: -100%; /* Start off-screen to the left */
+    top: 150%; /* Start below the visible screen */
     transform: scale(1); /* Default scale */
-    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+    transition: transform 0.1s ease-out; /* Smooth scaling */
+    will-change: transform; /* Optimize for animation */
 }
