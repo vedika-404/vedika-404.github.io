@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("scroll", () => {
+/*document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
@@ -33,8 +33,23 @@ document.addEventListener("scroll", () => {
 
     // Apply transformations
     scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
-
+});*/
+document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
+
+    // Test transformation (hardcoded)
     scrollingText.style.transform = "translate(50%, 0) scale(2)";
 
+    // Log to verify
+    console.log("Transformation applied!");
+
+    // Scroll logic starts here (commented out for now to test above code)
+    // const scrollPosition = window.scrollY;
+
+    // const scrollStart = 300; // Adjust when the effect begins
+    // const translateY = Math.max(0, scrollPosition - scrollStart);
+    // const translateX = Math.min(100, (scrollPosition - scrollStart) / 3);
+    // const scale = Math.min(3, 1 + (scrollPosition - scrollStart) / 300);
+
+    // scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
 });
