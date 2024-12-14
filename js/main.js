@@ -17,50 +17,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-/*document.addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
-    // Ensure scrolling starts after some distance (e.g., 300px)
-    const scrollStart = 300;
+    // Scroll start and end thresholds
+    const scrollStart = 300; // Start effect after scrolling 300px
+    const scrollEnd = 800;  // End effect at 800px
 
-    // Vertical movement (translateY)
-    const translateY = Math.max(0, scrollPosition - scrollStart); // Text moves up into view
+    if (scrollPosition >= scrollStart && scrollPosition <= scrollEnd) {
+        // Progress normalized between 0 and 1
+        const progress = (scrollPosition - scrollStart) / (scrollEnd - scrollStart);
 
-    // Horizontal movement (translateX)
-    const translateX = Math.min(100, (scrollPosition - scrollStart) / 3); // Move from left to right
+        // Calculate transformations
+        const translateX = progress * 100; // Scroll to the right (down)
+        const translateY = 100 - progress * 100; // Move up
+        const scale = 1 + progress * 2; // Scale up to 3x size
 
-    // Scaling
-    const scale = Math.min(3, 1 + (scrollPosition - scrollStart) / 300); // Gradually grow up to 3x size
-
-    // Apply transformations
-    scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
-});*/
-
-
-
-document.addEventListener("scroll", () => {
-    const scrollingText = document.getElementById("scrollingText");
-    if (scrollingText) {
-        console.log("scrollingText element found!");
-    } 
-    else {
-        console.error("scrollingText element NOT found!");
+        // Apply transformations
+        scrollingText.style.transform = `translate(${translateX}%, -${translateY}%) scale(${scale})`;
+    } else if (scrollPosition < scrollStart) {
+        // Reset position and scale when scrolling back up above start
+        scrollingText.style.transform = "translate(0, 100%) scale(1)";
+    } else if (scrollPosition > scrollEnd) {
+        // Stop transformations at their final state when scrolling past the end
+        scrollingText.style.transform = "translate(100%, -100%) scale(3)";
     }
-
-    // Test transformation (hardcoded)
-    scrollingText.style.transform = "translate(50%, 0) scale(2)";
-
-    // Log to verify
-    console.log("Transformation applied!");
-
-    // Scroll logic starts here (commented out for now to test above code)
-    // const scrollPosition = window.scrollY;
-
-    // const scrollStart = 300; // Adjust when the effect begins
-    // const translateY = Math.max(0, scrollPosition - scrollStart);
-    // const translateX = Math.min(100, (scrollPosition - scrollStart) / 3);
-    // const scale = Math.min(3, 1 + (scrollPosition - scrollStart) / 300);
-
-    // scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
 });
