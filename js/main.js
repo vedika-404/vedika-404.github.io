@@ -36,8 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
     // Apply transformations
     scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
 });*/
+
+
+
 document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
+    if (scrollingText) {
+        console.log("scrollingText element found!");
+    } 
+    else {
+        console.error("scrollingText element NOT found!");
+    }
 
     // Test transformation (hardcoded)
     scrollingText.style.transform = "translate(50%, 0) scale(2)";
