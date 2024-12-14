@@ -140,27 +140,23 @@ body {
 /* Scrolling Text Section */
 .scrolling-text-section {
     position: relative;
-    height: 200vh; /* Extra height for scrolling effect */
+    height: 200vh; /* Extra height to allow for scrolling */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    z-index: 2;
 }
 
 /* Scrolling Text */
 .scrolling-text {
     font-family: 'Rocketpopchrome', cursive;
     font-size: 2rem; /* Default font size */
-    white-space: nowrap; /* Prevent line breaks */
     color: #f5f5dc; /* Cream */
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Red neon glow */
-    position: absolute; /* Allow movement with scroll */
-    transform-origin: center; /* Ensure scaling centers text */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
+    white-space: nowrap; /* Prevent text wrapping */
+    position: absolute;
+    top: 150%; /* Start below the visible screen */
+    left: -100%; /* Start off-screen to the left */
+    transform: scale(1); /* Default scale */
     transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
-body, html {
-    overflow: visible;
-    height: auto;
-}
-
