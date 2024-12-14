@@ -10,16 +10,17 @@
     src: url('../fonts/BMarmy.TTF') format('truetype');
 }
 
-/* General Reset */
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Rocketpopchrome', cursive;
     background-color: #000;
-    overflow: hidden;
+    overflow-x: hidden; /* Only prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
     color: #fff;
     height: 100%;
 }
+
 
 /* Background GIF */
 body {
