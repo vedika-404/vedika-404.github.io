@@ -146,7 +146,7 @@ body {
     height: 100vh; /* Full-screen height */
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     text-align: center;
     background-color: #000; /* Black background */
     z-index: 1; /* Above GIF background */
