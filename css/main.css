@@ -141,26 +141,23 @@ body {
     transform: rotate(90deg); /* Rotate on hover */
 }
 
-.scrolling-text-section {
-    position: relative;
-    height: 100vh; /* Full viewport height */
+/* Scrolling Section */
+.text-section {
+    height: 100vh; /* Full-screen height */
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* Align text to the bottom of the section */
-    overflow: hidden; /* Prevent overflow */
-    z-index: 2;
+    align-items: center;
+    text-align: center;
+    background-color: #000; /* Black background */
+    z-index: 1; /* Above GIF background */
+    position: relative;
 }
 
 .scrolling-text {
-    font-family: 'Rocketpopchrome', cursive;
-    font-size: 2rem; /* Initial size */
-    color: #f5f5dc;
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon glow */
-    white-space: nowrap; /* Prevent text wrapping */
-    position: absolute; /* Needed for smooth transform animation */
-    left: -100%; /* Start completely off-screen to the left */
-    bottom: 0; /* Anchor to the bottom of the section */
-    transform: scale(1); /* Default size */
-    z-index: 3; /* Above other content */
-    transition: transform 0.1s ease-out; /* Smooth scaling */
+    font-family: 'Rocketpopchrome', cursive; /* Rocketpop font */
+    font-size: 2rem; /* Initial font size */
+    color: #f5f5dc; /* Cream color */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
+    margin: 0;
+    padding: 1rem;
 }
