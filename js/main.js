@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-document.addEventListener("scroll", () => {
+/*document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
 
@@ -42,5 +42,16 @@ document.addEventListener("scroll", () => {
     } else if (scrollPosition > scrollEnd) {
         // Stop transformations at their final state when scrolling past the end
         scrollingText.style.transform = "translate(100%, -100%) scale(3)";
+    }
+});*/
+
+document.addEventListener("scroll", () => {
+    const scrollingText = document.getElementById("scrollingText");
+
+    if (scrollingText) {
+        console.log("Scrolling Text Found!"); // Debugging message
+        console.log(`Current Transform: ${scrollingText.style.transform}`); // Check applied transformations
+    } else {
+        console.error("Scrolling Text Element Not Found!");
     }
 });
