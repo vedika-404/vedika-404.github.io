@@ -23,7 +23,9 @@ body, html {
 /* Background GIF */
 body {
     background: url('../assets/homevid.gif') no-repeat center center fixed;
-    background-size: cover; /* Ensures the GIF covers the entire screen */
+    background-size: cover;
+    z-index: -1; /* Lower priority */
+    position: relative; /* Required for z-index to work */
 }
 
 /* Container for Main Content */
@@ -141,6 +143,7 @@ body {
 /* Updated Scrolling Text Section */
 .scrolling-text-section {
     position: relative;
+    z-index: 2; /* Higher than GIF */
     height: 200vh; /* Extra height for scrolling */
     display: flex;
     justify-content: center;
@@ -156,6 +159,7 @@ body {
     text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
     white-space: nowrap; /* Prevent text wrapping */
     position: absolute;
+    z-index: 3; /* Ensure it’s above everything else */
     left: -100%; /* Start off-screen to the left */
     top: 150%; /* Start below the visible screen */
     transform: scale(1); /* Default scale */
