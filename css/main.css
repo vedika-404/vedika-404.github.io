@@ -136,3 +136,49 @@ body {
 .menu-toggle:hover {
     transform: rotate(90deg); /* Rotate on hover */
 }
+
+/* Scrolling Text Section */
+.scrolling-text-section {
+    height: 100vh; /* Full height section */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevent horizontal scrollbars */
+    position: relative;
+    z-index: 1;
+}
+
+.scrolling-text-container {
+    position: absolute;
+    white-space: nowrap; /* Prevent text from breaking lines */
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.scrolling-text {
+    font-family: 'Rocketpopchrome', cursive; /* Use Rocketpopchrome font */
+    font-size: 2rem; /* Default size */
+    color: #f5f5dc; /* Cream text */
+    text-shadow: 0 0 5px #ff073a, 0 0 10px #ff073a; /* Subtle red glow */
+    animation: scrollText 10s linear infinite; /* Infinite scroll effect */
+    transform-origin: center; /* Ensure scaling centers text */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling */
+}
+
+/* Scroll Animation */
+@keyframes scrollText {
+    0% {
+        transform: translateX(100%); /* Start off-screen to the right */
+    }
+    100% {
+        transform: translateX(-100%); /* End off-screen to the left */
+    }
+}
+
+/* Scaling Effect when Scrolling */
+.scrolling-text.scaled {
+    font-size: 4rem; /* Larger size when scrolled into view */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Intense glow when scaled */
+}
