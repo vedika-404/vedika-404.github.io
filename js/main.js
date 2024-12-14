@@ -12,22 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!menuScreen.contains(e.target) && e.target !== menuToggle) {
             menuScreen.classList.remove("active");
         }
-    document.addEventListener("DOMContentLoaded", () => {
-    const scrollingText = document.querySelector(".scrolling-text");
-
-    // Track scroll and scale the text when in view
-    window.addEventListener("scroll", () => {
-        const rect = scrollingText.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // Check if scrolling text is in the viewport
-        if (rect.top < windowHeight && rect.bottom > 0) {
-            scrollingText.classList.add("scaled"); // Apply scaling
-        } else {
-            scrollingText.classList.remove("scaled"); // Remove scaling
-        }
     });
 });
+document.addEventListener("scroll", () => {
+    const scrollingText = document.getElementById("scrollingText");
+    const scrollPosition = window.scrollY;
 
-    });
+    // Adjust the Y position and scale based on scroll
+    const translateY = Math.max(0, scrollPosition - 500); // Start moving after scrolling 500px
+    const scale = Math.min(2, 1 + (scrollPosition - 500) / 500); // Gradually scale up to 2x
+
+    scrollingText.style.transform = `translateY(${translateY}px) scale(${scale})`;
 });
