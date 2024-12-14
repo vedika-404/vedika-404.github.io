@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const scrollPosition = window.scrollY;
 
             // Scroll start and end thresholds
-            const scrollStart = 300; // Start effect after scrolling 300px
-            const scrollEnd = 800;  // End effect at 800px
+           const scrollStart = 10; // Lowered for testing
+            const scrollEnd = 500; // Adjust as needed
+
 
             if (scrollPosition >= scrollStart && scrollPosition <= scrollEnd) {
                 // Progress normalized between 0 and 1
