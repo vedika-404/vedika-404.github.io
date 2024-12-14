@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
 document.addEventListener("scroll", () => {
     const scrollingText = document.getElementById("scrollingText");
     const scrollPosition = window.scrollY;
@@ -32,4 +33,8 @@ document.addEventListener("scroll", () => {
 
     // Apply transformations
     scrollingText.style.transform = `translate(${translateX}%, calc(${translateY}px - 50%)) scale(${scale})`;
+
+    const scrollingText = document.getElementById("scrollingText");
+    scrollingText.style.transform = "translate(50%, 0) scale(2)";
+
 });
