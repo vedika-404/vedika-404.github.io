@@ -167,18 +167,23 @@ body {
     transition: transform 0.3s ease-in-out; /* Smooth scaling */
 }
 
-/* Scroll Animation */
-@keyframes scrollText {
-    0% {
-        transform: translateX(100%); /* Start off-screen to the right */
-    }
-    100% {
-        transform: translateX(-100%); /* End off-screen to the left */
-    }
+/* Scrolling Text Section */
+.scrolling-text-section {
+    position: relative;
+    height: 200vh; /* Extra height for scrolling effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Scaling Effect when Scrolling */
-.scrolling-text.scaled {
-    font-size: 4rem; /* Larger size when scrolled into view */
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Intense glow when scaled */
+.scrolling-text {
+    font-family: 'Rocketpopchrome', cursive;
+    font-size: 2rem; /* Default font size */
+    white-space: nowrap; /* Prevent line breaks */
+    color: #f5f5dc; /* Cream */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Red neon glow */
+    position: fixed; /* Stay in place */
+    transform: translateY(0) scale(1); /* Initial position and scale */
+    transition: transform 0.2s ease; /* Smooth scaling */
 }
