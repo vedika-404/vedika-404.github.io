@@ -36,3 +36,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         videos[0].play();
+});
