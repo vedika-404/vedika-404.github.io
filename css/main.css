@@ -141,25 +141,46 @@ body {
     transform: rotate(90deg); /* Rotate on hover */
 }
 
-/* Scrolling Section */
-.text-section {
-    height: 100vh; /* Full-screen height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #000; /* Black background */
-    z-index: 1; /* Above GIF background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rocketpopchrome', cursive; /* Default font */
+    color: #f5f5dc; /* Cream text color */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    height: 200vh; /* Tall enough for scrolling */
     position: relative;
-    margin-top: 100vh; /* Push the text section below the home page */
 }
 
+.scrolling-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden; /* Prevent overflow */
+}
 
 .scrolling-text {
-    font-family: 'Rocketpopchrome', cursive; /* Rocketpop font */
-    font-size: 2rem; /* Initial font size */
-    color: #f5f5dc; /* Cream color */
-    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon red glow */
+    font-size: 6rem; /* Large text */
+    white-space: nowrap; /* Prevent wrapping */
+    margin: 0; /* Reset margin */
+    padding: 2rem; /* Add padding */
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a; /* Neon glow */
+    position: absolute; /* Absolute for scrolling */
+    top: 30%; /* Align vertically */
+    left: 0; /* Start fully visible */
+    transform: translateX(0%); /* Default position */
+    z-index: 2; /* Ensure visibility */
+    transition: transform 0.1s ease-out; /* Smooth movement */
+}
+
+.scrolling-text.duplicate {
+    position: absolute;
+    font-size: 6rem; /* Match first line */
+    white-space: nowrap;
     margin: 0;
-    padding: 1rem;
+    padding: 2rem;
+    text-shadow: 0 0 10px #ff073a, 0 0 20px #ff073a;
+    top: 30%; /* Align with first line */
+    left: 100%; /* Offset to the right of the first line */
+    transform: translateX(100%); /* Default position behind the first */
+    z-index: 2;
 }
