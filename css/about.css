@@ -1,0 +1,263 @@
+/* Import Fonts */
+@font-face {
+    font-family: 'Mostera';
+    src: url('../fonts/MosteraRegular-X38pZ.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'WonderlandPro';
+    src: url('../fonts/WONDERLANDPRO-Regular.ttf') format('truetype');
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'WonderlandPro', serif;
+    background-color: #f5f5f0;
+    line-height: 1.6;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-family: 'Mostera', sans-serif;
+    font-size: 2.5rem;
+    color: #2e2e2e;
+}
+
+/* About Section */
+/* About Grid Content */
+.about-grid {
+    display: flex;
+    flex-direction: row; /* Align left and right sections side by side */
+    justify-content: space-between; /* Ensure equal spacing between sections */
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.left-section {
+    flex: 1; /* Take up half the grid */
+    max-width: 50%; /* Restrict width to half */
+}
+
+.right-section {
+    flex: 1; /* Take up half the grid */
+    max-width: 50%; /* Restrict width to half */
+    display: flex;
+    justify-content: flex-start; /* Align videos to the left inside the section */
+    align-items: flex-start;
+}
+
+.video-gallery {
+    width: 100%; /* Use the full width of the right section */
+    display: flex;
+    flex-direction: column; /* Stack videos vertically */
+    gap: 1rem; /* Add space between videos */
+}
+
+.video-gallery video {
+    width: auto; /* Allow width to adjust based on height */
+    max-width: 100%; /* Ensure videos fit within the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Set a max height to match "About Me" section */
+    border-radius: 8px;
+}
+
+.cv-download {
+    margin-bottom: 1rem; /* Reduce bottom margin to bring "Contact Me" closer */
+    text-align: left;
+}
+
+.contact-info {
+    margin-top: 1rem; /* Reduce top margin of "Contact Me" */
+    padding: 1rem 1.5rem;
+}
+
+
+.about-content {
+    margin-top: 4rem; /* Spacing from the top */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures left and right sections are spaced */
+    gap: 1rem;
+    align-items: flex-start; /* Align content to the left */
+    padding: 0; /* Remove any extra padding */
+    margin-left: 2rem; /* Add consistent left margin if needed */
+    box-sizing: border-box;
+}
+
+.about-content h2 {
+    margin: -4; /* Remove extra margins */
+    padding: 0; /* Remove padding */
+    font-family: 'Mostera', sans-serif; /* Consistent font */
+    text-align: left; /* Align text to the left */
+    margin-left: 0; /* Ensure no unintended left margin */
+}
+
+
+.skills {
+    margin-top: 2rem;
+    font-family: 'Mostera', sans-serif; /* Set font to WonderlandPro */
+}
+
+.skills ul {
+    list-style: disc;
+    margin-left: 2rem;
+    font-family: 'WonderlandPro', serif; /* Ensure bullet points also use WonderlandPro */
+}
+
+
+
+.download-link {
+    display: inline-block;
+    font-family: 'Mostera', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #2e2e2e;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: #444444;
+    transform: scale(1.1);
+}
+
+/* Menu Button */
+.menu-toggle {
+    font-family: 'Mostera', sans-serif;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #2e2e2e;
+    cursor: pointer;
+    padding: 0;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #2e2e2e;
+    transition: all 0.3s ease;
+}
+
+/* Sliding Menu */
+.menu-screen {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(46, 46, 46, 0.8); /* 0.8 is 80% opaque */
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the left */
+    transition: right 0.8s ease; /* Control sliding animation speed */
+    z-index: 1000;
+}
+
+.menu-screen.active {
+    right: 0;
+}
+
+
+.menu-screen ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align text to the left */
+    padding-left: 1rem; /* Add left margin for spacing */
+}
+
+.menu-screen li {
+    margin: 1rem 0; /* Add spacing between menu items */
+    padding-left: 0.5rem; /* Optional: Add extra padding for alignment */
+}
+
+
+.menu-screen a {
+    font-family: 'Mostera', sans-serif;
+    font-size: 1.2rem;
+    color: #f5f5f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-screen a:hover {
+    color: #ff6347; /* Change to orange on hover */
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 1rem; /* Reduce top margin of "Contact Me" */
+    padding: 1rem 1.5rem;
+    background-color: #2e2e2e;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-family: 'Mostera', sans-serif;
+    font-size: 1.8rem;
+    color: #f5f5f0;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    font-family: 'WonderlandPro', serif;
+    font-size: 1.2rem;
+    color: #f5f5f0;
+    margin: 0.5rem 0;
+}
+
+.contact-info a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #f5f5f0;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+    .video-section video {
+        max-width: 100%; /* Make videos more responsive */
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .about-content {
+        margin-top: 2rem;
+    }
+    .video-section {
+        flex-direction: column; /* Stack videos vertically */
+    }
+}
