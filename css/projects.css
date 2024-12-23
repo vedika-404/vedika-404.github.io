@@ -1,0 +1,115 @@
+/* Fonts */
+@font-face {
+    font-family: 'RedsemaRegular';
+    src: url('fonts/RedsemaRegular-0W9Kd.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'MaximaNouva';
+    src: url('fonts/MaximaNouva-SemiBold.otf') format('opentype');
+}
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'RedsemaRegular', sans-serif;
+    background: linear-gradient(135deg, #222831, #393e46);
+    color: #eeeeee;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.main-title {
+    font-family: 'MaximaNouva', serif;
+    font-size: 2.5rem;
+    color: #f1f1f1;
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #eeeeee;
+    transition: transform 0.3s ease;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.project-block {
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.4s, background 0.3s;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.project-block:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.project-block video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.project-block:hover video {
+    opacity: 1;
+}
+
+.project-title {
+    z-index: 2;
+    position: relative;
+    font-family: 'MaximaNouva', serif;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 960px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
