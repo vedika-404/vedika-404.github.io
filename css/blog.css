@@ -1,0 +1,150 @@
+/* Import Fonts */
+@font-face {
+    font-family: 'HardcoreAttitude';
+    src: url('../fonts/HARDCORE ATTITUDE.otf') format('opentype');
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'HardcoreAttitude', sans-serif;
+    background: #000; /* Black background for contrast */
+    color: #f5f5f0; /* Light text color */
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Video Container */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send behind all other content */
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers entire screen */
+}
+
+/* Menu Button */
+/* Menu Button */
+.menu-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem; /* Position to the top right */
+    z-index: 10; /* Ensure button is above all content */
+    font-size: 2.5rem;
+    color: #f5f5f0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #ff6347; /* Change to orange on hover */
+}
+
+.menu-toggle.active {
+    transform: rotate(90deg); /* Rotate 90 degrees when active */
+}
+
+/* Content Styling */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 80%;
+}
+
+.content h1 {
+    font-size: 6rem; /* Increase text size significantly */
+    font-weight: bold;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+/* Menu Styling */
+.menu-toggle {
+    position: fixed; /* Fixed to remain at the top-right of the viewport */
+    top: 1rem; /* Distance from the top */
+    right: 1rem; /* Distance from the right */
+    z-index: 1100; /* Ensure it's above all other elements */
+    font-size: 2.5rem; /* Adjust button size */
+    color: #f5f5f0; /* White color */
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #ff6347; /* Change to orange on hover */
+    transform: rotate(90deg); /* Rotate on hover */
+}
+
+/* Heading Shadow */
+.content h1 {
+    font-size: 6rem; /* Larger text */
+    font-weight: bold;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    margin: 0;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); /* Add subtle shadow */
+}
+
+/* Menu Animation */
+.menu-screen {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: rgba(46, 46, 46, 0.8);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: right 0.8s ease;
+    z-index: 1000; /* Ensure menu is above videos */
+}
+
+.menu-screen.active {
+    right: 0; /* Slide into view */
+}
+
+
+.menu-screen ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.menu-screen li {
+    margin: 1rem 0;
+}
+
+.menu-screen a {
+    font-family: 'HardcoreAttitude', sans-serif;
+    font-size: 1.5rem; /* Larger menu links */
+    color: #f5f5f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu-screen a:hover {
+    color: #ff6347; /* Orange hover effect */
+}
